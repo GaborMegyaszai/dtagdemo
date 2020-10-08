@@ -33,7 +33,7 @@ spec:
         env:
         - name: GIN_MODE
           value: release
-        image: 95.217.176.245:8082/dtdocker/free5gc-amf:1.0
+        image: 95.217.176.245:8082/dtdocker/free5gc-amf:2.0
         imagePullPolicy: "IfNotPresent"
         name: amf
         ports:
