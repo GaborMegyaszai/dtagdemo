@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: free5gc
-  namespace: 5gcore
+  namespace: 5gtest
 spec:
   chart:
     repository: https://github.com/GaborMegyaszai/dtagdemo
