@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: udr
+  name: udr
+spec:
+  ports:
+  - name: "29504"
+    port: 29504
+    targetPort: 29504
+  selector:
+    io.kompose.service: udr
+status:
+  loadBalancer: {}

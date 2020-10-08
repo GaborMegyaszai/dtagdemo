@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: free5gc-pcf
+  name: free5gc-pcf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: free5gc-pcf
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/privnet: "true"
+        io.kompose.service: free5gc-pcf
+    spec:
+      containers:
+      - args:
+        - ./pcf
+        - -pcfcfg
+        - ../config/pcfcfg.conf
+        env:
+        - name: GIN_MODE
+          value: release
+        image: 95.217.176.245:8082/dtdocker/free5gc-pcf:1.0
+        imagePullPolicy: "IfNotPresent"
+        name: pcf
+        ports:
+        - containerPort: 29507
+        resources: {}
+        volumeMounts:
+        - mountPath: /free5gc/config/pcfcfg.conf
+          name: cfgmap0
+          subPath: pcfcfg.conf
+        - mountPath: /free5gc/config/free5GC.conf
+          name: cfgmap1
+          subPath: free5GC.conf
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: free5gc-pcf-claim0
+        persistentVolumeClaim:
+          claimName: free5gc-pcf-claim0
+      - name: free5gc-pcf-claim1
+        persistentVolumeClaim:
+          claimName: free5gc-pcf-claim1
+      - name: cfgmap0
+        configMap:
+          name: free5gc-pcf-conf
+      - name: cfgmap1
+        configMap:
+          name: free5gc-conf
+
+status: {}
