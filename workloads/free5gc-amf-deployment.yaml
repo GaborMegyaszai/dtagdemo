@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: free5gc-amf
+  name: free5gc-amf
+  namespace: 5gtest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: free5gc-amf
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/privnet: "true"
+        io.kompose.service: free5gc-amf
+    spec:
+      containers:
+      - args:
+        - ./amf
+        - -amfcfg
+        - ../config/amfcfg.conf
+        env:
+        - name: GIN_MODE
+          value: release
+        image: 95.217.176.245:8082/dtdocker/free5gc-amf:1.0
+        imagePullPolicy: "IfNotPresent"
+        name: amf
+        ports:
+        - containerPort: 29518
+        resources: {}
+        volumeMounts:
+        - mountPath: /free5gc/config/amfcfg.conf
+          name: cfgmap0
+          subPath: amfcfg.conf
+        - mountPath: /free5gc/config/free5GC.conf
+          name: cfgmap1
+          subPath: free5CG.conf
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: free5gc-amf-claim0
+        persistentVolumeClaim:
+          claimName: free5gc-amf-claim0
+      - name: free5gc-amf-claim1
+        persistentVolumeClaim:
+          claimName: free5gc-amf-claim1
+      - name: cfgmap0
+        configMap:
+          name: free5gc-amf-conf
+      - name: cfgmap1
+        configMap:
+          name: free5gc-conf
+
+status: {}
