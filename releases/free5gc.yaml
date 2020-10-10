@@ -8,6 +8,6 @@ metadata:
 spec:
   releaseName: dtag5gc
   chart:
-    repository: https://raw.githubusercontent.com/GaborMegyaszai/dtagdemo/master
+    repository: https://raw.githubusercontent.com/GaborMegyaszai/dtagdemo
     name: free5gc-amf-deployment
     path: workloads
