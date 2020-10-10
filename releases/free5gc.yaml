@@ -8,7 +8,7 @@ metadata:
 spec:
   releaseName: dtag5gc
   chart:
-    repository: https://github.com/GaborMegyaszai/dtagdemo
-    name: db-deployment, db-service
+    repository: http://95.217.176.245:8082/artifactory/f5gchelmdt/
+    name: free5gc-5.0
     path: workloads
-    version: 1.0.0
+    version: 5.0.0
