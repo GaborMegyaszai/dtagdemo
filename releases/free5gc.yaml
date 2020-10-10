@@ -1,12 +1,13 @@
-# apiVersion: helm.fluxcd.io/v1
-# kind: HelmRelease
-# metadata:
-#   name: free5gc
-#   namespace: 5gtest
-# spec:
-#   chart:
-#     repository: https://github.com/GaborMegyaszai/dtagdemo
-#     name: docker-compose
-#     ref: master
-#     path: charts/docker-compose
-#     version: 0.0.1
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: free5gc
+  namespace: 5gcore
+  annotations:
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: dtag5gc
+  chart:
+    repository: https://github.com/GaborMegyaszai/dtagdemo
+    path: workloads
+    version: 1.0.0
