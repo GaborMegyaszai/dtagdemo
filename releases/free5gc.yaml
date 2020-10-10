@@ -6,7 +6,7 @@ metadata:
   annotations:
     fluxcd.io/automated: "false"
 spec:
-  releaseName: free5gc-amf
+  releaseName: docker-compose
   chart:
     repository: https://github.com/GaborMegyaszai/dtagdemo
     name: free5gc-amf-deployment
