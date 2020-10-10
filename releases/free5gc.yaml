@@ -11,4 +11,4 @@ spec:
     repository: http://95.217.176.245:8082/artifactory/f5gchelmdt/
     name: free5gc-5.0
     path: workloads
-    version: 5.0.0
+    version: 0.0.1
