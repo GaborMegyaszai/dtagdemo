@@ -9,6 +9,6 @@ spec:
   releaseName: dtag5gc
   chart:
     repository: https://github.com/GaborMegyaszai/dtagdemo
-    name: free5gc-amf-deployment
+    name: free5gc-amf
     path: workloads
     version: 0.0.1
