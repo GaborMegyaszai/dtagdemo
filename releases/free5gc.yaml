@@ -6,7 +6,7 @@ metadata:
   annotations:
     fluxcd.io/automated: "false"
 spec:
-  releaseName: dtag5gc
+  releaseName: free5gc-amf
   chart:
     repository: https://github.com/GaborMegyaszai/dtagdemo
     name: free5gc-amf-deployment
