@@ -9,5 +9,6 @@ spec:
   releaseName: dtag5gc
   chart:
     repository: https://github.com/GaborMegyaszai/dtagdemo
+    name: db-deployment, db-service
     path: workloads
     version: 1.0.0
