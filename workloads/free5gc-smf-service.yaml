@@ -8,7 +8,6 @@ metadata:
   labels:
     io.kompose.service: smf
   name: smf
-  namespace: 5gtest
 spec:
   ports:
   - name: "29502"

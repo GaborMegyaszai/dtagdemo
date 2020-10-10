@@ -5,7 +5,6 @@ metadata:
   labels:
     io.kompose.service: free5gc-amf-claim1
   name: free5gc-amf-claim1
-  namespace: 5gtest
 spec:
   accessModes:
   - ReadWriteOnce

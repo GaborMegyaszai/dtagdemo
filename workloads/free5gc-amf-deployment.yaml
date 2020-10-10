@@ -8,7 +8,6 @@ metadata:
   labels:
     io.kompose.service: free5gc-amf
   name: free5gc-amf
-  namespace: 5gtest
 spec:
   replicas: 1
   selector:

@@ -8,7 +8,6 @@ metadata:
   labels:
     io.kompose.service: webui
   name: webui
-  namespace: 5gtest
 spec:
   ports:
   - name: "5000"

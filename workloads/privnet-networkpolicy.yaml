@@ -3,7 +3,6 @@ kind: NetworkPolicy
 metadata:
   creationTimestamp: null
   name: privnet
-  namespace: 5gtest
 spec:
   ingress:
   - from:

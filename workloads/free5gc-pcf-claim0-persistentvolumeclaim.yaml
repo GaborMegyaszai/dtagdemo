@@ -5,7 +5,6 @@ metadata:
   labels:
     io.kompose.service: free5gc-pcf-claim0
   name: free5gc-pcf-claim0
-  namespace: 5gtest
 spec:
   accessModes:
   - ReadWriteOnce

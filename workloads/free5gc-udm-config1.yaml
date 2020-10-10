@@ -2,7 +2,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: free5gc-udm-conf
-  namespace: 5gtest
 data:
   udmcfg.conf: |
     info:
