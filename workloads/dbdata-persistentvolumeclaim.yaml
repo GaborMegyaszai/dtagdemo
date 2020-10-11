@@ -5,6 +5,7 @@ metadata:
   labels:
     io.kompose.service: dbdata
   name: dbdata
+  namespace: 5gcore
 spec:
   accessModes:
   - ReadWriteOnce

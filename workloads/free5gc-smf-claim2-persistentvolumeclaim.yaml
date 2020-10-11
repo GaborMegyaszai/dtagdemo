@@ -5,6 +5,7 @@ metadata:
   labels:
     io.kompose.service: free5gc-smf-claim2
   name: free5gc-smf-claim2
+  namespace: 5gcore
 spec:
   accessModes:
   - ReadWriteOnce

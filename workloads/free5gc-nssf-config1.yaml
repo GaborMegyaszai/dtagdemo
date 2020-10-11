@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: free5gc-nssf-conf
+  namespace: 5gcore
 data:
   nssfcfg.conf: |
     info:

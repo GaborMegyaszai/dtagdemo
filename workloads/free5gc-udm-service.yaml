@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: udm
   name: udm
+  namespace: 5gcore
 spec:
   ports:
   - name: "29503"

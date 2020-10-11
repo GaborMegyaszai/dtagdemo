@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: free5gc-n3iwf
   name: free5gc-n3iwf
+  namespace: 5gcore
 spec:
   replicas: 1
   selector:

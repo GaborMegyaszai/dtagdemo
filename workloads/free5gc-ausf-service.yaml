@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: ausf
   name: ausf
+  namespace: 5gcore
 spec:
   ports:
   - name: "29509"

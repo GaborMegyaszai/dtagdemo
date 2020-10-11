@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: free5gc-upf-b
   name: free5gc-upf-b
+  namespace: 5gcore
 spec:
   replicas: 1
   selector:
