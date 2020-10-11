@@ -56,7 +56,7 @@ spec:
           claimName: free5gc-webui-claim1
       - name: cfgmap0
         configMap:
-          name: webui-Konf
+          name: webui-conf
       - name: cfgmap1
         configMap:
           name: free5gc-conf
