@@ -1,1 +1,1 @@
-Demo GoCD pipelines
+Demo charts
