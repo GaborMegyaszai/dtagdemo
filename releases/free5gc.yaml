@@ -1,13 +1,13 @@
-apiVersion: helm.fluxcd.io/v1
-kind: HelmRelease
-metadata:
-  name: free5gc
-  namespace: 5gcore
-  annotations:
-    fluxcd.io/automated: "false"
-spec:
-  releaseName: dtag5gc
-  chart:
-    repository: https://github.com/GaborMegyaszai/dtagdemo
-    name: free5gc-amf-deployment
-    path: workloads
+# apiVersion: helm.fluxcd.io/v1
+# kind: HelmRelease
+# metadata:
+#   name: free5gc
+#   namespace: 5gcore
+#   annotations:
+#     fluxcd.io/automated: "false"
+# spec:
+#   releaseName: dtag5gc
+#   chart:
+#     repository: https://github.com/GaborMegyaszai/dtagdemo
+#     name: free5gc-amf-deployment
+#     path: workloads
